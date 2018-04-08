@@ -4,6 +4,7 @@ FROM phusion/baseimage:master
 CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
+RUN sudo apt-get install cmake git build-essential libboost-all-dev
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
