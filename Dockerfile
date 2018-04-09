@@ -12,8 +12,8 @@ RUN apt-get update && \
     libboost-all-dev
     
 # Install auryn
-RUN git clone https://github.com/fzenke/auryn.git && cd auryn/build/release
-RUN ./bootstrap.sh && make    
+RUN git clone https://github.com/fzenke/auryn.git
+RUN cd auryn/build/release && ./bootstrap.sh && make    
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
