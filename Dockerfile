@@ -9,7 +9,8 @@ RUN apt-get update && \
     cmake \
     git \
     build-essential \
-    libboost-all-dev
+    libboost-all-dev \
+    gnuplot
     
 # Install auryn
 RUN git clone https://github.com/fzenke/auryn.git
